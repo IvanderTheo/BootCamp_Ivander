@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\categories;
 
 class ProductController extends Controller
 {
@@ -22,10 +24,13 @@ class ProductController extends Controller
             'price'=> 30000
             ],
         ];
+
+        $products = Product::with('categories')->get();
+
         return response()-> json([
             'status'=>'berhasil',
             'message'=>'data berhasil di ambil',
-            'data'=>$data
+            'data'=>$products
         ]);
     }
     public function show($id) {

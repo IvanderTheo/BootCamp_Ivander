@@ -9,6 +9,7 @@
     <div>
         <p>Halo, {{ $nama }}</p>
         <p>Selamat Belajar {{ $materi }}</p>
+        <a href=""> go to route</a>
     </div>
 </body>
 </html>
