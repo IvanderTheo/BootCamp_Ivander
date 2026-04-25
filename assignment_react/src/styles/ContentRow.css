@@ -1,0 +1,83 @@
+.content-row {
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.row-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #c084fc, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.row-container {
+  position: relative;
+  width: 100%;
+}
+
+.cards-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for cards scroll */
+.cards-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cards-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.5);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}
+
+/* Remove scrollbar on mobile */
+@media (max-width: 768px) {
+  .cards-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-row {
+    padding: 0 1.5rem;
+  }
+
+  .cards-scroll {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .row-title {
+    font-size: 1.2rem;
+  }
+
+  .cards-scroll {
+    gap: 0.75rem;
+  }
+}
